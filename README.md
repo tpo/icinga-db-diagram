@@ -12,7 +12,7 @@ graphviz to produce a diagram image.
 Examples
 ========
 You can a generated icinga2 databse diagram
-<a href="https://github.com/tpo/icinga-db-diagram/raw/master/README">
+<a href="https://github.com/tpo/icinga-db-diagram/raw/master/diagram.png">
 here</a> - it's quite large! It has been generated from
 <a href="https://github.com/tpo/icinga-db-diagram/raw/master/concatenated.dot">
 this dot file</a>.
