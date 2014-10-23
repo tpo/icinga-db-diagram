@@ -76,6 +76,10 @@ How to use
     $ dot diagram.dot -Tpng > diagram.png
     cat concatenated.dot | ./schema_spy_to_graph.pl > diagram.dot
 
+License
+=======
+GPL 2+
+
 Author and Contact
 ==================
 Tomas Pospisek <tpo_deb@sourcepole.ch>
