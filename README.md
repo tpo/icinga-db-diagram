@@ -34,47 +34,47 @@ package, which is the JDBC driver required by SchemaSpy.
 * use SchemaSpy as described on its homepage to produce
   the dot files, that can be found in the diagram directory.
 
-    $ java -jar schemaSpy_5.0.0.jar -t pgsql -db icinga -host host.running.icinga:5432 -u icinga -p password -o output/ -dp /usr/share/java/postgresql-jdbc3-9.1.jar -s public
+      $ java -jar schemaSpy_5.0.0.jar -t pgsql -db icinga -host host.running.icinga:5432 -u icinga -p password -o output/ -dp /usr/share/java/postgresql-jdbc3-9.1.jar -s public
 
 * concatenate the \*.dot files
 
-    $ cat output/diagrams/*.dot > concatenated.dot
+      $ cat output/diagrams/*.dot > concatenated.dot
 
 * edit the concatenated dot file, so that it only has one
   diagram definition in it. Delete all the other diagram
   preambles. That is, leave only one of these in the concatenated
   dot file:
 
-    digraph "icinga_acknowledgements" {
-      graph [
-        rankdir="RL"
-        bgcolor="#f7f7f7"
-        nodesep="0.18"
-        ranksep="0.46"
-        fontname="Helvetica"
-        fontsize="11"
-      ];
-      node [
-        fontname="Helvetica"
-        fontsize="11"
-        shape="plaintext"
-      ];
-      edge [
-        arrowsize="0.8"
-      ];
+      digraph "icinga_acknowledgements" {
+        graph [
+          rankdir="RL"
+          bgcolor="#f7f7f7"
+          nodesep="0.18"
+          ranksep="0.46"
+          fontname="Helvetica"
+          fontsize="11"
+        ];
+        node [
+          fontname="Helvetica"
+          fontsize="11"
+          shape="plaintext"
+        ];
+        edge [
+          arrowsize="0.8"
+        ];
 
 * don't forget to only leave one closing parenthesis in the dot file:
 
-    };
+      };
 
 * feed the edited dot file to the script:
 
-    $ cat concatenated.dot | ./schema_spy_to_graph.pl > diagram.dot
+      $ cat concatenated.dot | ./schema_spy_to_graph.pl > diagram.dot
 
 * use graphviz to create the image:
 
-    $ dot diagram.dot -Tpng > diagram.png
-    cat concatenated.dot | ./schema_spy_to_graph.pl > diagram.dot
+      $ dot diagram.dot -Tpng > diagram.png
+      cat concatenated.dot | ./schema_spy_to_graph.pl > diagram.dot
 
 ### License
 
