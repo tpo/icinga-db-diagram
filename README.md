@@ -9,16 +9,16 @@ guess which of the icinga's tables' columns are foreign keys
 and produces a connected dot diagram that can be fed to
 graphviz to produce a diagram image.
 
-Examples
-========
+### Examples
+
 You can a generated icinga2 databse diagram
 <a href="https://github.com/tpo/icinga-db-diagram/raw/master/diagram.png">
 here</a> - it's quite large! It has been generated from
 <a href="https://github.com/tpo/icinga-db-diagram/raw/master/concatenated.dot">
 this dot file</a>.
 
-Requirements
-============
+### Requirements
+
 * graphviz
 * perl
 * SchemaSpy (http://schemaspy.sourceforge.net/)
@@ -29,8 +29,8 @@ perl 5.14.2, graphviz 2.26.3 and SchemaSpy 5.0.0.
 Under Debian you'll need to additionally install the 'libpostgresql-jdbc-java'
 package, which is the JDBC driver required by SchemaSpy.
 
-How to use
-==========
+### How to use
+
 * use SchemaSpy as described on its homepage to produce
   the dot files, that can be found in the diagram directory.
 
@@ -76,10 +76,10 @@ How to use
     $ dot diagram.dot -Tpng > diagram.png
     cat concatenated.dot | ./schema_spy_to_graph.pl > diagram.dot
 
-License
-=======
+### License
+
 GPL 2+
 
-Author and Contact
-==================
+### Author and Contact
+
 Tomas Pospisek <tpo_deb@sourcepole.ch>
